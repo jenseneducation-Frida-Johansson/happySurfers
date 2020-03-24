@@ -1,12 +1,31 @@
 <template>
-  <div>
-    <h1>MENU</h1>
+  <div class="Menu">
+    <h2>MENU</h2>
+    <MenuItem v-for="item in menu.menu" v-bind:key="item.id" v-bind:item="item" />
   </div>
 </template>
 
 <script>
-export default {};
+import MenuItem from "../components/MenuItem.vue";
+export default {
+  name: "Menu",
+  components: {
+    MenuItem
+  },
+  /*props: {
+    menu: Array
+  },*/
+  computed: {
+    menu() {
+      return this.$store.state.menu;
+    }
+  }
+};
 </script>
 
-<style>
+<style scoped>
+.Menu {
+  width: 100%;
+  background: #f3e4e1;
+}
 </style>
