@@ -2,8 +2,8 @@
   <div class="MenuItem">
     <button class="itemAdd" v-on:click="addItem"></button>
     <div class="item">
-      <h3>{{item.title}}...... {{item.price}} kr</h3>
-      <p>{{item.desc}}</p>
+      <h3>{{ item.title }}...... {{ item.price }} kr</h3>
+      <p>{{ item.desc }}</p>
     </div>
   </div>
 </template>
@@ -17,13 +17,16 @@ export default {
 
   methods: {
     addItem() {
-      const itemInfo = {
+      const newItem = {
         id: this.item.id,
         title: this.item.title,
         price: this.item.price,
-        amount: 1
+        amount: 1,
+        sumprice: this.item.price
       };
-      this.$store.state.cart.push(itemInfo);
+      this.$store.dispatch("addMenuItem", newItem);
+
+      //this.$store.state.cart.push(itemInfo);
       console.log(this.item.title + " added");
     }
   }

@@ -45,7 +45,13 @@
 </template>
 
 <script>
-export default {};
+export default {
+  created() {
+    if (!localStorage.getItem("user")) {
+      this.$router.push("/login");
+    }
+  }
+};
 </script>
 
 <style>

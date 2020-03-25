@@ -11,13 +11,13 @@ import Header from "./components/Header.vue";
 import Footer from "./components/Footer.vue";
 export default {
   name: "App",
+  created() {
+    this.$store.dispatch("getMenu");
+  },
   components: {
     appHeader: Header,
     appFooter: Footer
   }
-  /*beforeMount() {
-    this.$store.dispatch("getMenu");
-  }*/
 };
 </script>
 
@@ -32,4 +32,3 @@ export default {
   color: #2c3e50;
 }
 </style>
-

@@ -1,7 +1,7 @@
 <template>
   <div class="Menu">
     <h2>MENU</h2>
-    <MenuItem v-for="item in menu.menu" v-bind:key="item.id" v-bind:item="item" />
+    <MenuItem v-for="item in menu" v-bind:key="item.id" v-bind:item="item" />
   </div>
 </template>
 
@@ -11,6 +11,11 @@ export default {
   name: "Menu",
   components: {
     MenuItem
+  },
+  created() {
+    if (!localStorage.getItem("user")) {
+      this.$router.push("/login");
+    }
   },
   /*props: {
     menu: Array
