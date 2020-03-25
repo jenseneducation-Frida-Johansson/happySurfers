@@ -13,6 +13,9 @@
       <router-link to="/order" tag="li">
         <a v-on:click="emitCloseNav">Orderstatus</a>
       </router-link>
+      <router-link to="/me" tag="li">
+        <a v-on:click="emitCloseNav">My profile</a>
+      </router-link>
     </ul>
   </div>
 </template>

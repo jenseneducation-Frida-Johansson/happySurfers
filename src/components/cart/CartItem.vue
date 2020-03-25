@@ -1,13 +1,13 @@
 <template>
   <div class="CartItem">
     <div class="itemDetail">
-      <h4>{{cartItem.title}}</h4>
-      <p>{{cartItem.price}}</p>
+      <h4>{{ cartItem.title }}</h4>
+      <p>{{ cartItem.sumprice }}</p>
     </div>
     <div class="itemAmount">
-      <button class="itemPlus" v-on:click="itemPlus">+</button>
-      <p>{{cartItem.amount}}</p>
-      <button class="itemMin" v-on:click="itemMin">-</button>
+      <button class="itemPlus" v-on:click="itemPlus"></button>
+      <p>{{ cartItem.amount }}</p>
+      <button class="itemMin" v-on:click="itemMin"></button>
     </div>
   </div>
 </template>
@@ -46,5 +46,17 @@ export default {
 .itemAmount {
   width: 20%;
   text-align: center;
+}
+.itemPlus {
+  height: 1rem;
+  background: url("../../assets/graphics/arrow-up.svg") no-repeat;
+  background-position: center;
+  border: none;
+}
+.itemMin {
+  height: 1rem;
+  background: url("../../assets/graphics/arrow-down.svg") no-repeat;
+  background-position: center;
+  border: none;
 }
 </style>
