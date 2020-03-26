@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <LoadingPage />
     <app-header></app-header>
     <router-view></router-view>
     <app-footer />
@@ -7,6 +8,7 @@
 </template>
 
 <script>
+import LoadingPage from "./components/LoadingPage.vue";
 import Header from "./components/Header.vue";
 import Footer from "./components/Footer.vue";
 export default {
@@ -15,6 +17,7 @@ export default {
     this.$store.dispatch("getMenu");
   },
   components: {
+    LoadingPage,
     appHeader: Header,
     appFooter: Footer
   }
@@ -23,6 +26,7 @@ export default {
 
 <style>
 #app {
+  width: 375px;
   margin: auto;
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
