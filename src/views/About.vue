@@ -36,7 +36,6 @@
         </p>
       </div>
       <div class="profile-container">
-        <img class="eva-cortado" :src="require('./eva-cortado.jpg')" />
         <h3>Eva Cortado</h3>
         <p>VD & Grundare</p>
       </div>
@@ -87,9 +86,9 @@ export default {
 .about-p {
   font-size: 12px;
 }
-.eva-cortado {
+/*.eva-cortado {
   border-radius: 50px;
-}
+}*/
 p {
   font-size: 12px;
 }
