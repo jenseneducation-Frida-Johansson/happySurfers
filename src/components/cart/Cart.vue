@@ -2,16 +2,12 @@
   <div class="Cart">
     <div class="CloseCartBtn">
       <button class="emitCloseCart" v-on:click="emitCloseCart">
-        <span class="itemsNr" v-if="itemsNr !== 0"> {{ itemsNr }} </span>
+        <span class="itemsNr" v-if="itemsNr !== 0">{{ itemsNr }}</span>
       </button>
     </div>
     <div class="purchase" v-if="itemsNr !== 0">
       <h1>Your Order</h1>
-      <cart-item
-        v-for="cartItem in cartItems"
-        v-bind:key="cartItem.id"
-        v-bind:cartItem="cartItem"
-      />
+      <cart-item v-for="cartItem in cartItems" v-bind:key="cartItem.id" v-bind:cartItem="cartItem" />
       <h3 v-if="totalPrice !== 0">Total..............{{ totalPrice }} kr</h3>
       <p>include tax and delivery price</p>
       <button class="payBtn" v-on:click="setorder">Take my money</button>
@@ -83,7 +79,7 @@ export default {
 .emitCloseCart {
   width: 4rem;
   height: 4rem;
-  background: url("../../assets/graphics/bag.svg") no-repeat #38220f;
+  background: url("../../assets/graphics/bag.svg") no-repeat #2f2926;
   background-position: center;
   padding: 0.2rem 0.7rem 0.2rem 0.7rem;
   border-radius: 12rem;

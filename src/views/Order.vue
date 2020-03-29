@@ -35,7 +35,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
 .Order {
   background: #e5674e;
   color: white;

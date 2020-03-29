@@ -1,15 +1,11 @@
 <template>
   <div class="Profile">
-    <img src="../assets/graphics/Profile.svg" alt="" />
+    <img src="../assets/graphics/Profile.svg" alt />
     <h2>{{ user.userName }}</h2>
     <p>{{ user.userEpost }}</p>
     <div class="history" v-if="history">
       <h2>Order History</h2>
-      <HistoryItem
-        v-for="item in purchase"
-        v-bind:key="item.id"
-        v-bind:item="item"
-      />
+      <HistoryItem v-for="item in purchase" v-bind:key="item.id" v-bind:item="item" />
     </div>
     <h2 v-if="history">Total spend: {{ totalSpend }} kr</h2>
 
@@ -60,9 +56,10 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
 .Profile {
   height: 650px;
+  background: #38220f;
 }
 .history {
   text-align: left;
