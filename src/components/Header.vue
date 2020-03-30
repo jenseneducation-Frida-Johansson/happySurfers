@@ -1,9 +1,9 @@
 <template>
-  <div class="header">
+  <div class="header" v-bind:class="bgcolor.color">
     <div class="buttons">
       <!--  {{showNav ? 'X' : '='}}  -->
       <button class="show-nav" v-on:click="nav"></button>
-      <button class="show-cart" v-on:click="cart">
+      <button class="show-cart" v-if="disableCart" v-on:click="cart">
         <div class="itemsNr" v-if="itemsNr !== 0">{{ itemsNr }}</div>
       </button>
     </div>
@@ -31,6 +31,12 @@ export default {
   computed: {
     itemsNr() {
       return this.$store.state.itemsNr;
+    },
+    disableCart() {
+      return this.$store.state.showCart;
+    },
+    bgcolor() {
+      return this.$store.state.bgColor;
     }
   },
   methods: {
@@ -53,7 +59,6 @@ export default {
 
 <style>
 .header {
-  background: url("../assets/graphics/graphics-header.svg") no-repeat;
   height: 7rem;
   width: 100%;
 }
@@ -90,5 +95,11 @@ export default {
   font-size: 15px;
   font-family: sans-serif;
   border-radius: 50%;
+}
+.pink {
+  background: url("../assets/graphics/graphics-header.svg") no-repeat #f3e4e1;
+}
+.brown {
+  background: url("../assets/graphics/graphics-header.svg") no-repeat #2f2926;
 }
 </style>

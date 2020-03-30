@@ -38,7 +38,7 @@ export default {
   align-items: center;
   justify-content: center;
   width: 375px;
-  /*height: 100%;*/
+  height: 100%;
   background: #39846c;
   position: absolute;
   z-index: 9999;

@@ -19,6 +19,8 @@ export default {
     if (localStorage.getItem("user")) {
       this.$router.push("/");
     }
+    this.$store.state.showCart = false;
+    this.$store.state.bgColor.color = "pink";
   },
   data() {
     return {

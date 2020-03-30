@@ -16,6 +16,8 @@ export default {
     if (!localStorage.getItem("user")) {
       this.$router.push("/login");
     }
+    this.$store.state.showCart = true;
+    this.$store.state.bgColor.color = "pink";
   },
   /*props: {
     menu: Array

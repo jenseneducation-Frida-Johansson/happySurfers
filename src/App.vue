@@ -20,7 +20,12 @@ export default {
     LoadingPage,
     appHeader: Header,
     appFooter: Footer
-  }
+  } /*,
+  computed: {
+    bgColor() {
+      return this.$store.state.bgColor;
+    }
+  }*/
 };
 </script>
 
@@ -32,6 +37,7 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
+  background: #f3e4e1;
   color: #2c3e50;
 }
 

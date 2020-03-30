@@ -2,14 +2,11 @@
   <div class="Cart">
     <div class="CloseCartBtn">
       <button class="emitCloseCart" v-on:click="emitCloseCart">
-
         <div class="itemsNr" v-if="itemsNr !== 0">{{ itemsNr }}</div>
-
       </button>
     </div>
 
     <div class="purchase" v-if="itemsNr !== 0">
-
       <h3>Din beställning</h3>
       <div class="yourOrder">
         <cart-item
@@ -21,7 +18,6 @@
         <p>inkl moms + drönarleverans</p>
       </div>
       <button class="payBtn" v-on:click="setorder">Take my money!</button>
-
     </div>
     <div v-else class="noPurchase">
       <h3>Du har ingen beställning</h3>
@@ -58,7 +54,6 @@ export default {
     },
     goHome() {
       this.$emit("close", this.cart);
-      this.$router.push("/");
     }
   },
   computed: {

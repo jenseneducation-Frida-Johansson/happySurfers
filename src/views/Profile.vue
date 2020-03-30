@@ -29,6 +29,8 @@ export default {
     if (!localStorage.getItem("user")) {
       this.$router.push("/login");
     }
+    this.$store.state.bgColor.color = "brown";
+    this.$store.state.showCart = false;
   },
   computed: {
     history() {
@@ -62,22 +64,22 @@ export default {
 <style>
 .Profile {
   width: 375px;
-  height: 100%;
+  /*height: 100%;*/
+  height: 812px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   background: #2f2926;
   color: white;
-  position: absolute;
-  z-index: 2;
+  /*position: absolute;*/
+  /*z-index: 2;*/
 }
 
 .OrderHistory {
   margin-left: -20px;
   font-family: serif;
   font-size: 1.5rem;
-
 }
 .history {
   text-align: left;
