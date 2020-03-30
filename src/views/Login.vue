@@ -4,21 +4,9 @@
     <p>Create an account to see your purchase history</p>
     <div class="userInfo">
       <label for="name">Name</label>
-      <input
-        type="text"
-        class="name"
-        id="name"
-        placeholder="Your Name"
-        v-model="userName"
-      />
+      <input type="text" class="name" id="name" placeholder="Your Name" v-model="userName" />
       <label for="epost">Epost</label>
-      <input
-        type="text"
-        class="epost"
-        id="epost"
-        placeholder="E-mail address"
-        v-model="userEpost"
-      />
+      <input type="text" class="epost" id="epost" placeholder="E-mail address" v-model="userEpost" />
     </div>
     <button class="signUpBtn" v-on:click="logIn">Brew me a cup!</button>
   </div>

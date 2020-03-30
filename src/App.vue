@@ -34,4 +34,20 @@ export default {
   text-align: center;
   color: #2c3e50;
 }
+
+h1 {
+  font-size: 40px;
+  font-family: serif;
+}
+
+h3 {
+  font-size: 30px;
+  font-family: serif;
+  padding: 20px;
+}
+
+h4 {
+  font-size: 25px;
+  font-family: serif;
+}
 </style>

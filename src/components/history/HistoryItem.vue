@@ -1,7 +1,13 @@
 <template>
   <div class="HistoryItem">
-    <h5>{{ item.orderNr }} .................. {{ item.date }}</h5>
-    <p>Total order price ................... {{ item.orderPrice }} kr</p>
+    <div class="orderInfo">
+      <h5>{{ item.orderNr }}</h5>
+      <h6>{{ item.date }}</h6>
+    </div>
+    <div class="orderPrice">
+      <p>total ordersumma</p>
+      <p>{{ item.orderPrice }} kr</p>
+    </div>
   </div>
 </template>
 
@@ -16,6 +22,27 @@ export default {
 
 <style>
 .HistoryItem {
-  text-align: center;
+  border-bottom: 1px solid white;
+  opacity: 60%;
+}
+
+.orderInfo,
+.orderPrice {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.orderInfo {
+  margin-top: -15px;
+}
+
+.orderPrice {
+  margin-top: -30px;
+}
+
+p {
+  font-size: 12px;
 }
 </style>

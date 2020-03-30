@@ -5,7 +5,7 @@
     </div>
     <ul>
       <router-link to="/" tag="li">
-        <a v-on:click="emitCloseNav">Menu</a>
+        <a v-on:click="emitCloseNav">Meny</a>
       </router-link>
       <router-link to="/about" tag="li">
         <a v-on:click="emitCloseNav">Vårt Kaffe</a>
@@ -14,7 +14,7 @@
         <a v-on:click="emitCloseNav">Orderstatus</a>
       </router-link>
       <router-link to="/me" tag="li">
-        <a v-on:click="emitCloseNav">My profile</a>
+        <a v-on:click="emitCloseNav">Min profil</a>
       </router-link>
     </ul>
   </div>
@@ -38,25 +38,25 @@ export default {
 
 <style scoped>
 .Navigation {
-  background: #38220f;
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  z-index: 2;
-  cursor: pointer;
   display: block;
+  width: 375px;
+  height: 120%;
+  margin-top: -95px;
+  background: #2f2926;
+  position: absolute;
+  z-index: 9999;
+  cursor: pointer;
+  font-family: serif;
 }
 .emitCloseNav {
   width: 4rem;
   height: 4rem;
   background: url("../../assets/graphics/close.svg") no-repeat white;
-  background-size: 60%;
+  background-size: 40%;
   background-position: center;
   padding: 1rem;
   border-radius: 10rem;
-  margin: 1.5rem 20rem 1rem 1.8rem;
+  margin: 15px 290px 0 15px;
 }
 ul {
   list-style-type: none;

@@ -1,6 +1,6 @@
 <template>
   <div class="Menu">
-    <h2>MENU</h2>
+    <h1>Meny</h1>
     <MenuItem v-for="item in menu" v-bind:key="item.id" v-bind:item="item" />
   </div>
 </template>
@@ -30,7 +30,7 @@ export default {
 
 <style scoped>
 .Menu {
-  width: 100%;
   background: #f3e4e1;
+  padding: 15px;
 }
 </style>

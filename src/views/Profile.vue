@@ -1,16 +1,19 @@
 <template>
   <div class="Profile">
     <img src="../assets/graphics/Profile.svg" alt />
-    <h2>{{ user.userName }}</h2>
-    <p>{{ user.userEpost }}</p>
+
+    <h4 class="userName">{{ user.userName }}</h4>
+    <p class="userEpost">{{ user.userEpost }}</p>
     <div class="history" v-if="history">
-      <h2>Order History</h2>
+      <h3 class="OrderHistory">Orderhistorik</h3>
       <HistoryItem v-for="item in purchase" v-bind:key="item.id" v-bind:item="item" />
     </div>
-    <h2 v-if="history">Total spend: {{ totalSpend }} kr</h2>
-
+    <div class="totalSpend">
+      <p>Totalt spenderat</p>
+      <p v-if="history">{{ totalSpend }} kr</p>
+    </div>
     <div v-if="!history">
-      <h2>There's no purchase history</h2>
+      <h2>Ingen orderhistorik</h2>
     </div>
   </div>
 </template>
@@ -58,11 +61,39 @@ export default {
 
 <style>
 .Profile {
-  height: 650px;
-  background: #38220f;
+  width: 375px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: #2f2926;
+  color: white;
+  position: absolute;
+  z-index: 2;
+}
+
+.OrderHistory {
+  margin-left: -20px;
+  font-family: serif;
+  font-size: 1.5rem;
+
 }
 .history {
   text-align: left;
-  border-bottom: 3px solid black;
+  width: 85%;
+  border-bottom: 1px solid white;
+}
+
+.totalSpend {
+  width: 85%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+.userEpost {
+  margin: -30px 0 4rem 0;
 }
 </style>

@@ -2,18 +2,29 @@
   <div class="Cart">
     <div class="CloseCartBtn">
       <button class="emitCloseCart" v-on:click="emitCloseCart">
-        <span class="itemsNr" v-if="itemsNr !== 0">{{ itemsNr }}</span>
+
+        <div class="itemsNr" v-if="itemsNr !== 0">{{ itemsNr }}</div>
+
       </button>
     </div>
+
     <div class="purchase" v-if="itemsNr !== 0">
-      <h1>Your Order</h1>
-      <cart-item v-for="cartItem in cartItems" v-bind:key="cartItem.id" v-bind:cartItem="cartItem" />
-      <h3 v-if="totalPrice !== 0">Total..............{{ totalPrice }} kr</h3>
-      <p>include tax and delivery price</p>
-      <button class="payBtn" v-on:click="setorder">Take my money</button>
+
+      <h3>Din beställning</h3>
+      <div class="yourOrder">
+        <cart-item
+          v-for="cartItem in cartItems"
+          v-bind:key="cartItem.id"
+          v-bind:cartItem="cartItem"
+        />
+        <h5 v-if="totalPrice !== 0">Total........................... {{ totalPrice }} kr</h5>
+        <p>inkl moms + drönarleverans</p>
+      </div>
+      <button class="payBtn" v-on:click="setorder">Take my money!</button>
+
     </div>
     <div v-else class="noPurchase">
-      <h1>You have no order</h1>
+      <h3>Du har ingen beställning</h3>
       <button class="payBtn" v-on:click="goHome">Go to shop</button>
     </div>
   </div>
@@ -21,6 +32,7 @@
 
 <script>
 import CartItem from "./CartItem.vue";
+
 export default {
   name: "Cart",
   components: {
@@ -65,13 +77,11 @@ export default {
 
 <style scoped>
 .Cart {
-  background: black;
-  opacity: 0.9;
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
+  width: 375px;
+  height: 120%;
+  margin-top: -95px;
+  background: rgba(0, 0, 0, 0.8);
+  position: absolute;
   z-index: 2;
   cursor: pointer;
   display: block;
@@ -83,28 +93,44 @@ export default {
   background-position: center;
   padding: 0.2rem 0.7rem 0.2rem 0.7rem;
   border-radius: 12rem;
-  margin: 1.5rem 1rem 1rem 17rem;
+  border: none;
+  margin: 1rem 0 1rem 17.6rem;
 }
 .purchase,
 .noPurchase {
   margin: auto;
-  width: 85%;
+  width: 90%;
   background: white;
   color: black;
+  border-radius: 2px;
 }
 .payBtn {
-  background: black;
+  background: #2f2926;
   color: white;
   width: 60%;
   border-radius: 50px;
-  font-size: 18px;
+  font-size: 20px;
+  font-weight: bold;
   padding: 10px;
   margin: 30px;
+  font-family: serif;
 }
-.itemsNr {
-  background: brown;
-  color: white;
-  font-size: 20px;
-  border-radius: 5rem;
+
+.yourOrder {
+  width: 85%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 0 20px 0 20px;
+}
+
+h5 {
+  font-size: 24px;
+  font-family: serif;
+}
+
+.arrow {
+  background: red;
 }
 </style>

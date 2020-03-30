@@ -2,12 +2,12 @@
   <div class="about">
     <div class="about-container">
       <div class="text-container">
-        <h1 class="about-h1">Vårt kaffe</h1>
-        <h2 class="about-h2">
+        <h1>Vårt kaffe</h1>
+        <p class="about-h2">
           Pumpkin spice mug, barista cup, sit macchiato, kopi-luwak, doppio,
           grounds dripper, crema, strong whipped, variety extra iced id lungo
           half and half mazagran. Pumpkin spice.
-        </h2>
+        </p>
         <p class="about-p">
           Que dark fair trade, spoon decaffeinated, barista wings whipped, as
           rich aftertaste, con panna milk black, arabica white rich beans single
@@ -30,8 +30,9 @@
         </p>
       </div>
       <div class="profile-container">
+        <img class="eva-cortado" src="../views/eva-cortado.jpg" alt />
         <h3>Eva Cortado</h3>
-        <p>VD & Grundare</p>
+        <p class="VD">VD & Grundare</p>
       </div>
     </div>
   </div>
@@ -60,7 +61,7 @@ export default {
 }
 
 .text-container {
-  padding: 25px;
+  padding: 30px;
 }
 
 .profile-container {
@@ -70,20 +71,22 @@ export default {
   flex-direction: column;
 }
 
-.about-h1 {
-  font-family: Serif;
-  font-size: 40px;
-}
 .about-h2 {
   font-size: 14px;
+  font-weight: bold;
 }
 .about-p {
   font-size: 12px;
 }
-/*.eva-cortado {
+.eva-cortado {
   border-radius: 50px;
-}*/
-p {
+}
+
+h3 {
+  margin-top: -10px;
+}
+.VD {
+  margin-top: -40px;
   font-size: 12px;
 }
 </style>

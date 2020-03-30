@@ -1,8 +1,8 @@
 <template>
   <div class="CartItem">
     <div class="itemDetail">
-      <h4>{{ cartItem.title }}</h4>
-      <p>{{ cartItem.sumprice }}</p>
+      <h4>{{ cartItem.title }} ........</h4>
+      <p class="summa">{{ cartItem.sumprice }} kr</p>
     </div>
     <div class="itemAmount">
       <button class="itemPlus" v-on:click="itemPlus"></button>
@@ -38,15 +38,12 @@ export default {
   display: flex;
   flex-direction: row;
 }
+
 .itemDetail {
-  width: 70%;
   text-align: left;
-  margin-left: 2rem;
+  margin: -10px 10px;
 }
-.itemAmount {
-  width: 20%;
-  text-align: center;
-}
+
 .itemPlus {
   height: 1rem;
   background: url("../../assets/graphics/arrow-up.svg") no-repeat;
@@ -58,5 +55,8 @@ export default {
   background: url("../../assets/graphics/arrow-down.svg") no-repeat;
   background-position: center;
   border: none;
+}
+.summa {
+  margin-top: -30px;
 }
 </style>

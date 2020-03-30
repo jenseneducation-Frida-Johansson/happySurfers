@@ -3,7 +3,7 @@
     <div class="showOrder" v-if="order.orderNr">
       <h4>Order number #{{ order.orderNr }}</h4>
       <img src="../assets/graphics/drone.svg" alt="deliver" class="orderPic" />
-      <h2>Your order is on the way!</h2>
+      <h2>Din beställning är på väg!</h2>
       <h4>{{ order.eta }} minutes</h4>
     </div>
     <div class="noOrder" v-else>
@@ -37,19 +37,22 @@ export default {
 
 <style>
 .Order {
+  width: 375px;
+  height: 100%;
+  margin-top: -115px;
   background: #e5674e;
   color: white;
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
+  position: absolute;
   z-index: 2;
   cursor: pointer;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding-top: 40px;
 }
 .orderPic {
-  margin: 5rem;
+  margin: 2rem;
 }
 .backHome {
   width: 60%;
@@ -58,5 +61,11 @@ export default {
   font-weight: 700;
   border-radius: 10rem;
   padding: 0.8rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+  font-family: serif;
+  padding: 0 40px 0 40px;
 }
 </style>
