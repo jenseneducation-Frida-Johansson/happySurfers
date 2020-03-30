@@ -2,7 +2,7 @@
   <div class="MenuItem">
     <button class="itemAdd" v-on:click="addItem"></button>
     <div class="item">
-      <h3>{{ item.title }}...... {{ item.price }} kr</h3>
+      <h4>{{ item.title }}... {{ item.price }} kr</h4>
       <p>{{ item.desc }}</p>
     </div>
   </div>
@@ -42,13 +42,19 @@ export default {
   width: 65%;
   text-align: left;
 }
+
+h4,
+p {
+  margin-bottom: -25px;
+  margin-top: 30px;
+}
 .itemAdd {
-  width: 3rem;
-  height: 3rem;
+  width: 2.5rem;
+  height: 2.5rem;
   border-radius: 3rem;
   margin: 2rem 1rem 1rem 1rem;
   background: url("../assets/graphics/add.svg") no-repeat #38220f;
-  background-size: 60%;
+  background-size: 55%;
   background-position: center;
 }
 </style>

@@ -4,9 +4,10 @@
       <!--  {{showNav ? 'X' : '='}}  -->
       <button class="show-nav" v-on:click="nav"></button>
       <button class="show-cart" v-on:click="cart">
-        <span class="itemsNr" v-if="itemsNr !== 0"> {{ itemsNr }} </span>
+        <div class="itemsNr" v-if="itemsNr !== 0">{{ itemsNr }}</div>
       </button>
     </div>
+
     <app-navigation v-if="showNav" v-on:close="closeNav"></app-navigation>
     <app-cart v-if="showCart" v-on:close="closeCart"></app-cart>
   </div>
@@ -50,11 +51,20 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
 .header {
-  background: url("../assets/graphics/graphics-header.svg") no-repeat #f3e4e1;
+  background: url("../assets/graphics/graphics-header.svg") no-repeat;
   height: 7rem;
+  width: 100%;
 }
+
+.buttons {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 15px;
+}
+
 .show-nav,
 .show-cart {
   width: 4rem;
@@ -65,20 +75,20 @@ export default {
 .show-nav {
   background: url("../assets/graphics/navicon.svg") no-repeat white;
   background-position: center;
-  margin: 1rem 6rem 1rem 0rem;
 }
 .show-cart {
-  background: url("../assets/graphics/bag.svg") no-repeat #38220f;
+  background: url("../assets/graphics/bag.svg") no-repeat #2f2926;
   background-position: center;
-  margin: 1rem 0rem 1rem 6rem;
 }
 .itemsNr {
-  width: 2rem;
-  height: 2rem;
-  margin: 0 0 3rem 2rem;
-  background: brown;
+  padding: 7px;
+  height: 10px;
+  width: 10px;
+  margin: 0 0 2rem 2rem;
+  background: #e5674e;
   color: white;
-  font-size: 20px;
-  border-radius: 5rem;
+  font-size: 15px;
+  font-family: sans-serif;
+  border-radius: 50%;
 }
 </style>

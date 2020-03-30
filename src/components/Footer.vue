@@ -10,7 +10,8 @@ export default {
 
 <style scoped>
 .Footer {
-  background: url("../assets/graphics/graphics-footer.svg") no-repeat #f3e4e1;
-  height: 5rem;
+  background: url("../assets/graphics/graphics-footer.svg") no-repeat;
+  height: 4.4rem;
+  margin-top: 30px;
 }
 </style>
