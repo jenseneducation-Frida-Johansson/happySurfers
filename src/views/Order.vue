@@ -38,7 +38,7 @@ export default {
 <style>
 .Order {
   width: 375px;
-  height: 100%;
+  height: 812px;
   margin-top: -115px;
   background: #e5674e;
   color: white;

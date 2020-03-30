@@ -20,7 +20,11 @@ export default new Vuex.Store({
     totalPrice: 0,
     itemsNr: 0,
     user: null,
-    history: []
+    history: [],
+    showCart: true,
+    bgColor: {
+      color: "pink"
+    }
   },
   mutations: {
     showMenu(state, data) {
