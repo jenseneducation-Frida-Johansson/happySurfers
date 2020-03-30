@@ -1,6 +1,7 @@
 <template>
   <div class="Profile">
     <img src="../assets/graphics/Profile.svg" alt />
+
     <h4 class="userName">{{ user.userName }}</h4>
     <p class="userEpost">{{ user.userEpost }}</p>
     <div class="history" v-if="history">
@@ -76,6 +77,7 @@ export default {
   margin-left: -20px;
   font-family: serif;
   font-size: 1.5rem;
+
 }
 .history {
   text-align: left;
