@@ -30,7 +30,7 @@
         </p>
       </div>
       <div class="profile-container">
-        <img class="eva-cortado" src="../views/eva-cortado.jpg" alt />
+        <img class="eva-cortado" src="../assets/graphics/eva-cortado.jpg" />
         <h3>Eva Cortado</h3>
         <p class="VD">VD & Grundare</p>
       </div>

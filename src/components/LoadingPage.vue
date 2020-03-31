@@ -61,7 +61,6 @@ export default {
 @keyframes scaleOut {
   to {
     opacity: 0;
-    /*visibility: hidden;*/
   }
 }
 </style>

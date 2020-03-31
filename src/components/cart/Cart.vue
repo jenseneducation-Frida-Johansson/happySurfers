@@ -55,7 +55,6 @@ export default {
         await this.$store.dispatch("getorder");
         this.$emit("close", this.cart);
         this.$router.push("/order");
-        console.log("order on the way");
       }
     },
     goHome() {

@@ -3,16 +3,9 @@ import Vuex from "vuex";
 
 import * as API from "../API/api.js";
 
-//import Menu from "../assets/data/menu.json";
-
-//import coffee from "./modules/coffee";
-
 Vue.use(Vuex);
 
 export default new Vuex.Store({
-  /*modules: {
-    coffee: coffee
-  },*/
   state: {
     menu: [],
     cart: [],
@@ -28,9 +21,7 @@ export default new Vuex.Store({
   },
   mutations: {
     showMenu(state, data) {
-      //console.log("get menu");
       state.menu = data;
-      //console.log(state.menu);
     },
     addCartItem(state, id) {
       const findItem = state.cart.find(item => item.id == id);
@@ -85,10 +76,8 @@ export default new Vuex.Store({
   },
   actions: {
     async getMenu({ commit }) {
-      //console.log("start fetch");
       const data = await API.getMenu();
       commit("showMenu", data);
-      //console.log(data);
     },
     plusAmount({ commit }, id) {
       commit("addCartItem", id);

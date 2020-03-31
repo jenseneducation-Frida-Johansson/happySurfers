@@ -19,9 +19,6 @@ export default {
     this.$store.state.showCart = true;
     this.$store.state.bgColor.color = "pink";
   },
-  /*props: {
-    menu: Array
-  },*/
   computed: {
     menu() {
       return this.$store.state.menu;

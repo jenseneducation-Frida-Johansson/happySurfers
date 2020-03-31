@@ -1,7 +1,6 @@
 <template>
   <div class="header" v-bind:class="bgcolor.color">
     <div class="buttons">
-      <!--  {{showNav ? 'X' : '='}}  -->
       <button class="show-nav" v-on:click="nav"></button>
       <button class="show-cart" v-if="disableCart" v-on:click="cart">
         <div class="itemsNr" v-if="itemsNr !== 0">{{ itemsNr }}</div>
@@ -16,7 +15,6 @@
 <script>
 import Navigation from "./nav/Navigation.vue";
 import Cart from "./cart/Cart.vue";
-//import showNavPic from "../assets/graphics/navicon.svg";
 export default {
   components: {
     appNavigation: Navigation,
@@ -51,7 +49,6 @@ export default {
     },
     closeCart(cart) {
       this.showCart = cart;
-      //this.showCart = !this.showCart;
     }
   }
 };
