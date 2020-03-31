@@ -8,9 +8,9 @@
       <h3 class="OrderHistory">Orderhistorik</h3>
       <HistoryItem v-for="item in purchase" v-bind:key="item.id" v-bind:item="item" />
     </div>
-    <div class="totalSpend">
+    <div class="totalSpend" v-if="history">
       <p>Totalt spenderat</p>
-      <p v-if="history">{{ totalSpend }} kr</p>
+      <p>{{ totalSpend }} kr</p>
     </div>
     <div v-if="!history">
       <h2>Ingen orderhistorik</h2>
