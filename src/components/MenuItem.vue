@@ -25,9 +25,6 @@ export default {
         sumprice: this.item.price
       };
       this.$store.dispatch("addMenuItem", newItem);
-
-      //this.$store.state.cart.push(itemInfo);
-      console.log(this.item.title + " added");
     }
   }
 };

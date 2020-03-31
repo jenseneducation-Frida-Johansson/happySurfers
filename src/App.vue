@@ -20,12 +20,7 @@ export default {
     LoadingPage,
     appHeader: Header,
     appFooter: Footer
-  } /*,
-  computed: {
-    bgColor() {
-      return this.$store.state.bgColor;
-    }
-  }*/
+  }
 };
 </script>
 

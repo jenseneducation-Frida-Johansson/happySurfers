@@ -64,7 +64,6 @@ export default {
 <style>
 .Profile {
   width: 375px;
-  /*height: 100%;*/
   height: 812px;
   display: flex;
   align-items: center;
@@ -72,8 +71,6 @@ export default {
   flex-direction: column;
   background: #2f2926;
   color: white;
-  /*position: absolute;*/
-  /*z-index: 2;*/
 }
 
 .OrderHistory {
