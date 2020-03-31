@@ -1,5 +1,8 @@
 <template>
   <div class="Cart">
+    <div v-if="show">
+      <LoadingPage class="LoadingPage" />
+    </div>
     <div class="CloseCartBtn">
       <button class="emitCloseCart" v-on:click="emitCloseCart">
         <div class="itemsNr" v-if="itemsNr !== 0">{{ itemsNr }}</div>
@@ -17,7 +20,7 @@
         <h5 v-if="totalPrice !== 0">Total........................... {{ totalPrice }} kr</h5>
         <p>inkl moms + drönarleverans</p>
       </div>
-      <button class="payBtn" v-on:click="setorder">Take my money!</button>
+      <button @click="show = true" class="payBtn" v-on:click="setorder">Take my money!</button>
     </div>
     <div v-else class="noPurchase">
       <h3>Du har ingen beställning</h3>
@@ -32,11 +35,14 @@ import CartItem from "./CartItem.vue";
 export default {
   name: "Cart",
   components: {
-    CartItem
+    CartItem,
+    LoadingPage: () => import("../LoadingPage.vue")
   },
+
   data() {
     return {
-      cart: false
+      cart: false,
+      show: false
     };
   },
   methods: {
@@ -125,7 +131,7 @@ h5 {
   font-family: serif;
 }
 
-.arrow {
-  background: red;
+.LoadingPage {
+  animation-duration: 100s;
 }
 </style>

@@ -26,7 +26,7 @@ export default {
     showToggle() {
       setTimeout(() => {
         this.show = false;
-      }, 1000);
+      }, 2500);
     }
   }
 };
@@ -38,12 +38,11 @@ export default {
   align-items: center;
   justify-content: center;
   width: 375px;
-  height: 100%;
   background: #39846c;
   position: absolute;
   z-index: 9999;
   animation-name: scaleOut;
-  animation-duration: 3s;
+  animation-duration: 4s;
 }
 
 .airbeanLogo {
